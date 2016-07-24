@@ -238,7 +238,7 @@
             
               
                 
-                <a class="post-title-link" href="/2016/07/24/My-New-Post/" itemprop="url">
+                <a class="post-title-link" href="/2016/07/24/github+hexo安装与设置/" itemprop="url">
                   My New Post
                 </a>
               
@@ -281,9 +281,28 @@
 
       
         
-          
-            
-          
+          <h2 id="一-注册github-创建仓库-“域名-github-io”"><a href="#一-注册github-创建仓库-“域名-github-io”" class="headerlink" title="一 注册github,创建仓库 “域名.github.io”"></a>一 注册github,创建仓库 “域名.github.io”</h2><h2 id="二-github绑定自己的域名"><a href="#二-github绑定自己的域名" class="headerlink" title="二 github绑定自己的域名"></a>二 github绑定自己的域名</h2><p>1、在source文件夹中新建一个CNAME文件（大写，无后缀名），然后用文本编辑器打开，在首行添加你的网站域名，如xxxx.com，注意前面没有<a href="http://，也没有www，然后使用hexo">http://，也没有www，然后使用hexo</a> g &amp;&amp; hexo d上传部署。</p>
+<p>2、在域名解析提供商，下面以dnspod为例。<br>（1）先添加一个CNAME，主机记录写@，后面记录值写上你的<a href="http://xxxx.github.io">http://xxxx.github.io</a><br>（2）再添加一个CNAME，主机记录写www，后面记录值也是<a href="http://xxxx.github.io">http://xxxx.github.io</a><br>这样别人用www和不用www都能访问你的网站（其实www的方式，会先解析成<a href="http://xxxx.github.io，然后根据CNAME再变成http://xxx.com，即中间是经过一次转换的）。">http://xxxx.github.io，然后根据CNAME再变成http://xxx.com，即中间是经过一次转换的）。</a></p>
+<p>上面，我们用的是CNAME别名记录，也有人使用A记录，后面的记录值是写github page里面的ip地址，但有时候IP地址会更改，导致最后解析不正确，所以还是推荐用CNAME别名记录要好些，不建议用IP。</p>
+<p>3、等十分钟左右，刷新浏览器，用你自己域名访问下试试</p>
+<h2 id="三-SSH设置"><a href="#三-SSH设置" class="headerlink" title="三 SSH设置"></a>三 SSH设置</h2><h2 id="四-hexo安装"><a href="#四-hexo安装" class="headerlink" title="四 hexo安装"></a>四 hexo安装</h2><p>第一步:<br>首先安装nodejs,这个是hexo运行的基础环境,安装很简便:sudo apt-get install nodejs</p>
+<p>第二步:<br>安装npm,这个也很简单,这是是node.js的包管理器,跟apt,pip等差不多的东东,<br>直接sudo apt-get install npm</p>
+<p>第三步:<br>接下来安装hexo或者hexo-cli,后者安装出现问题,前者没有问题,暂时还不知道原因.<br>所以我安装的是hexo,如果你使用sudo npm install hexo -g 或者 sudo npm install hexo-cli -g,是不会成功的,最起码我是这样的.</p>
+<p>正确的方法如下:<br>sudo npm install –unsafe-perm –verbose -g hexo</p>
+<p>sudo npm install -g hexo-cli</p>
+<h3 id="1-常用命令"><a href="#1-常用命令" class="headerlink" title="1.常用命令"></a>1.常用命令</h3><ul>
+<li>hexo n “postname” #发表新文章 </li>
+<li>hexo g #自动根据当前目录下文件,生成静态网页 </li>
+<li>hexo s #运行本地服务 </li>
+<li>hexo d #发表文章 </li>
+<li>hexo clean #清除缓存<h3 id="2-阅读全文设置"><a href="#2-阅读全文设置" class="headerlink" title="2.阅读全文设置"></a>2.阅读全文设置</h3></li>
+</ul>
+<p>如果不想博文在首页全部显示, 并能出现阅读全文按钮效果, 需要在你想在首页显示的部分下添加
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/07/24/github+hexo安装与设置/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
