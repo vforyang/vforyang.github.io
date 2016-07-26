@@ -84,15 +84,16 @@
 
 
 
-<meta name="description" content="重力在线分布式并行计算服务系统">
-<meta property="og:type" content="website">
-<meta property="og:title" content="重力在线 OnGra">
-<meta property="og:url" content="http://dvmn.com/index.html">
+<meta name="description" content="-- coding: utf-8 --#**import osimport numpy as npimport wlab #pip install wlabimport matplotlibimport matplotlib.cm as cmimport matplotlib.pyplot as pltfrom matplotlib.ticker import MultipleLocatorfro">
+<meta property="og:type" content="article">
+<meta property="og:title" content="matplotlib的示例：调整字体-设置刻度、坐标、colormap和colorbar">
+<meta property="og:url" content="http://dvmn.com/2016/07/26/matplotlib的示例：调整字体-设置刻度、坐标、colormap和colorbar/index.html">
 <meta property="og:site_name" content="重力在线 OnGra">
-<meta property="og:description" content="重力在线分布式并行计算服务系统">
+<meta property="og:description" content="-- coding: utf-8 --#**import osimport numpy as npimport wlab #pip install wlabimport matplotlibimport matplotlib.cm as cmimport matplotlib.pyplot as pltfrom matplotlib.ticker import MultipleLocatorfro">
+<meta property="og:updated_time" content="2016-07-26T08:36:41.357Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="重力在线 OnGra">
-<meta name="twitter:description" content="重力在线分布式并行计算服务系统">
+<meta name="twitter:title" content="matplotlib的示例：调整字体-设置刻度、坐标、colormap和colorbar">
+<meta name="twitter:description" content="-- coding: utf-8 --#**import osimport numpy as npimport wlab #pip install wlabimport matplotlibimport matplotlib.cm as cmimport matplotlib.pyplot as pltfrom matplotlib.ticker import MultipleLocatorfro">
 
 
 
@@ -113,9 +114,9 @@
 
 
 
-  <link rel="canonical" href="http://dvmn.com/"/>
+  <link rel="canonical" href="http://dvmn.com/2016/07/26/matplotlib的示例：调整字体-设置刻度、坐标、colormap和colorbar/"/>
 
-  <title> 重力在线 OnGra </title>
+  <title> matplotlib的示例：调整字体-设置刻度、坐标、colormap和colorbar | 重力在线 OnGra </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -136,9 +137,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -365,9 +364,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -387,10 +386,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/07/26/matplotlib的示例：调整字体-设置刻度、坐标、colormap和colorbar/" itemprop="url">
-                  matplotlib的示例：调整字体-设置刻度、坐标、colormap和colorbar
-                </a>
+                matplotlib的示例：调整字体-设置刻度、坐标、colormap和colorbar
               
             
           </h1>
@@ -430,9 +426,7 @@
       
 
       
-        
-          
-            <h1 id="coding-utf-8"><a href="#coding-utf-8" class="headerlink" title="-- coding: utf-8 --"></a>-<em>- coding: utf-8 -</em>-</h1><p>#<strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>**</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong><br>import os<br>import numpy as np<br>import wlab #pip install wlab<br>import matplotlib<br>import matplotlib.cm as cm<br>import matplotlib.pyplot as plt<br>from matplotlib.ticker import MultipleLocator<br>from scipy.interpolate import griddata<br>matplotlib.rcParams[‘xtick.direction’] = ‘out’<br>matplotlib.rcParams[‘ytick.direction’] = ‘out’  </p>
+        <h1 id="coding-utf-8"><a href="#coding-utf-8" class="headerlink" title="-- coding: utf-8 --"></a>-<em>- coding: utf-8 -</em>-</h1><p>#<strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>**</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong><br>import os<br>import numpy as np<br>import wlab #pip install wlab<br>import matplotlib<br>import matplotlib.cm as cm<br>import matplotlib.pyplot as plt<br>from matplotlib.ticker import MultipleLocator<br>from scipy.interpolate import griddata<br>matplotlib.rcParams[‘xtick.direction’] = ‘out’<br>matplotlib.rcParams[‘ytick.direction’] = ‘out’  </p>
 <p>#<strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>**</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong><br>FreqPLUS=[‘F06925’,’F10650’,’F23800’,’F18700’,’F36500’,’F89000’]  </p>
 <h1 id=""><a href="#" class="headerlink" title=" "></a> </h1><p>FindPath=’/d3/MWRT/R20130805/‘  </p>
 <p>#<strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>**</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong><br>fig = plt.figure(figsize=(8,6), dpi=72, facecolor=”white”)<br>axes = plt.subplot(111)<br>axes.cla()#清空坐标轴内的所有内容  </p>
@@ -490,16 +484,41 @@ plt.savefig(figname)
 plt.clf()#清除图形  
 </code></pre><p>#plt.show()<br>print(‘ALL -&gt; Finished OK’)  </p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>您的支持将激励我们前行！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="微信二维码稍后更新" alt="Yang WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="支付宝付款二维码稍后更新" alt="Yang Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
     </div>
+  </div>
 
-    <div>
+
       
     </div>
 
@@ -507,233 +526,32 @@ plt.clf()#清除图形
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/07/24/github+hexo安装与设置/" rel="next" title="github+hexo安装与设置">
+                <i class="fa fa-chevron-left"></i> github+hexo安装与设置
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2016/07/24/github+hexo安装与设置/" itemprop="url">
-                  github+hexo安装与设置
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-24T11:19:18+08:00" content="2016-07-24">
-              2016-07-24
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="一-注册github-创建仓库-“域名-github-io”"><a href="#一-注册github-创建仓库-“域名-github-io”" class="headerlink" title="一 注册github,创建仓库 “域名.github.io”"></a>一 注册github,创建仓库 “域名.github.io”</h2><h2 id="二-github绑定自己的域名"><a href="#二-github绑定自己的域名" class="headerlink" title="二 github绑定自己的域名"></a>二 github绑定自己的域名</h2><p>1、在source文件夹中新建一个CNAME文件（大写，无后缀名），然后用文本编辑器打开，在首行添加你的网站域名，如xxxx.com，注意前面没有<a href="http://，也没有www，然后使用hexo">http://，也没有www，然后使用hexo</a> g &amp;&amp; hexo d上传部署。</p>
-<p>2、在域名解析提供商，下面以dnspod为例。<br>（1）先添加一个CNAME，主机记录写@，后面记录值写上你的<a href="http://xxxx.github.io">http://xxxx.github.io</a><br>（2）再添加一个CNAME，主机记录写www，后面记录值也是<a href="http://xxxx.github.io">http://xxxx.github.io</a><br>这样别人用www和不用www都能访问你的网站（其实www的方式，会先解析成<a href="http://xxxx.github.io，然后根据CNAME再变成http://xxx.com，即中间是经过一次转换的）。">http://xxxx.github.io，然后根据CNAME再变成http://xxx.com，即中间是经过一次转换的）。</a></p>
-<p>上面，我们用的是CNAME别名记录，也有人使用A记录，后面的记录值是写github page里面的ip地址，但有时候IP地址会更改，导致最后解析不正确，所以还是推荐用CNAME别名记录要好些，不建议用IP。</p>
-<p>3、等十分钟左右，刷新浏览器，用你自己域名访问下试试</p>
-<h2 id="三-SSH设置"><a href="#三-SSH设置" class="headerlink" title="三 SSH设置"></a>三 SSH设置</h2><h2 id="四-hexo安装"><a href="#四-hexo安装" class="headerlink" title="四 hexo安装"></a>四 hexo安装</h2><p>第一步:<br>首先安装nodejs,这个是hexo运行的基础环境,安装很简便:sudo apt-get install nodejs</p>
-<p>第二步:<br>安装npm,这个也很简单,这是是node.js的包管理器,跟apt,pip等差不多的东东,<br>直接sudo apt-get install npm</p>
-<p>第三步:<br>接下来安装hexo或者hexo-cli,后者安装出现问题,前者没有问题,暂时还不知道原因.<br>所以我安装的是hexo,如果你使用sudo npm install hexo -g 或者 sudo npm install hexo-cli -g,是不会成功的,最起码我是这样的.</p>
-<p>正确的方法如下:<br>sudo npm install –unsafe-perm –verbose -g hexo</p>
-<p>sudo npm install -g hexo-cli</p>
-<h3 id="1-常用命令"><a href="#1-常用命令" class="headerlink" title="1.常用命令"></a>1.常用命令</h3><ul>
-<li>hexo n “postname” #发表新文章 </li>
-<li>hexo g #自动根据当前目录下文件,生成静态网页 </li>
-<li>hexo s #运行本地服务 </li>
-<li>hexo d #发表文章 </li>
-<li>hexo clean #清除缓存<h3 id="2-阅读全文设置"><a href="#2-阅读全文设置" class="headerlink" title="2.阅读全文设置"></a>2.阅读全文设置</h3></li>
-</ul>
-<p>如果不想博文在首页全部显示, 并能出现阅读全文按钮效果, 需要在你想在首页显示的部分下添加
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/07/24/github+hexo安装与设置/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
           </div>
-        
-      
-    </div>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+          <div class="post-nav-prev post-nav-item">
             
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/24/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-24T11:08:19+08:00" content="2016-07-24">
-              2016-07-24
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -741,6 +559,10 @@ plt.clf()#清除图形
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -760,8 +582,17 @@ plt.clf()#清除图形
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -797,6 +628,17 @@ plt.clf()#清除图形
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#coding-utf-8"><span class="nav-number">1.</span> <span class="nav-text">-- coding: utf-8 --</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-number">2.</span> <span class="nav-text"> </span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查找目录总文件名中保护F06925，EMS和txt字符的文件"><span class="nav-number">3.</span> <span class="nav-text">查找目录总文件名中保护F06925，EMS和txt字符的文件</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -900,6 +742,10 @@ plt.clf()#清除图形
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
