@@ -84,22 +84,34 @@
 
 
 
-<meta name="description" content="GSD (Swedish DEM Grid) FilesGSD格式文件用于储存瑞典DEM数据。GlobleMapper11及以上版本支持这种格式的数据。
-GXF (Geosoft ASCII Grid) FilesGXF是一种用于储存高程数据的ASCII网格数据格式。GlobleMapper11及以上版本支持这种格式的数据。
-Geodas Grid (GRD98) Format这是用于储存网格数据">
+<meta name="description" content="source/etc/profile是让/etc/profile文件修改后立即生效，
+还有一种方法是：. /etc/profile
+注意：.和/etc/profile有空格
+linux中source命令
+source命令也称为“点命令”也就是一个符号（.）.source命令通常用于重新执行刚修改的初始或文件，使之立即生效，而不必注销并重新登录。
+一、Linux的变量种类
+按变量的生存周期来划分，L">
 <meta property="og:type" content="article">
-<meta property="og:title" content="高程网格数据篇">
-<meta property="og:url" content="http://dvmn.com/2016/07/27/高程网格数据篇/index.html">
+<meta property="og:title" content="设置环境变量永久生效和临时生效">
+<meta property="og:url" content="http://dvmn.com/2016/07/30/设置环境变量永久生效和临时生效/index.html">
 <meta property="og:site_name" content="重力在线 OnGra">
-<meta property="og:description" content="GSD (Swedish DEM Grid) FilesGSD格式文件用于储存瑞典DEM数据。GlobleMapper11及以上版本支持这种格式的数据。
-GXF (Geosoft ASCII Grid) FilesGXF是一种用于储存高程数据的ASCII网格数据格式。GlobleMapper11及以上版本支持这种格式的数据。
-Geodas Grid (GRD98) Format这是用于储存网格数据">
-<meta property="og:updated_time" content="2016-07-27T08:12:06.030Z">
+<meta property="og:description" content="source/etc/profile是让/etc/profile文件修改后立即生效，
+还有一种方法是：. /etc/profile
+注意：.和/etc/profile有空格
+linux中source命令
+source命令也称为“点命令”也就是一个符号（.）.source命令通常用于重新执行刚修改的初始或文件，使之立即生效，而不必注销并重新登录。
+一、Linux的变量种类
+按变量的生存周期来划分，L">
+<meta property="og:updated_time" content="2016-07-30T07:31:33.845Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="高程网格数据篇">
-<meta name="twitter:description" content="GSD (Swedish DEM Grid) FilesGSD格式文件用于储存瑞典DEM数据。GlobleMapper11及以上版本支持这种格式的数据。
-GXF (Geosoft ASCII Grid) FilesGXF是一种用于储存高程数据的ASCII网格数据格式。GlobleMapper11及以上版本支持这种格式的数据。
-Geodas Grid (GRD98) Format这是用于储存网格数据">
+<meta name="twitter:title" content="设置环境变量永久生效和临时生效">
+<meta name="twitter:description" content="source/etc/profile是让/etc/profile文件修改后立即生效，
+还有一种方法是：. /etc/profile
+注意：.和/etc/profile有空格
+linux中source命令
+source命令也称为“点命令”也就是一个符号（.）.source命令通常用于重新执行刚修改的初始或文件，使之立即生效，而不必注销并重新登录。
+一、Linux的变量种类
+按变量的生存周期来划分，L">
 
 
 
@@ -120,9 +132,9 @@ Geodas Grid (GRD98) Format这是用于储存网格数据">
 
 
 
-  <link rel="canonical" href="http://dvmn.com/2016/07/27/高程网格数据篇/"/>
+  <link rel="canonical" href="http://dvmn.com/2016/07/30/设置环境变量永久生效和临时生效/"/>
 
-  <title> 高程网格数据篇 | 重力在线 OnGra </title>
+  <title> 设置环境变量永久生效和临时生效 | 重力在线 OnGra </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -392,7 +404,7 @@ Geodas Grid (GRD98) Format这是用于储存网格数据">
             
             
               
-                高程网格数据篇
+                设置环境变量永久生效和临时生效
               
             
           </h1>
@@ -404,8 +416,8 @@ Geodas Grid (GRD98) Format这是用于储存网格数据">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-27T16:11:26+08:00" content="2016-07-27">
-              2016-07-27
+            <time itemprop="dateCreated" datetime="2016-07-30T15:30:56+08:00" content="2016-07-30">
+              2016-07-30
             </time>
           </span>
 
@@ -432,22 +444,46 @@ Geodas Grid (GRD98) Format这是用于储存网格数据">
       
 
       
-        <p>GSD (Swedish DEM Grid) Files<br>GSD格式文件用于储存瑞典DEM数据。GlobleMapper11及以上版本支持这种格式的数据。</p>
-<p>GXF (Geosoft ASCII Grid) Files<br>GXF是一种用于储存高程数据的ASCII网格数据格式。GlobleMapper11及以上版本支持这种格式的数据。</p>
-<p>Geodas Grid (GRD98) Format<br>这是用于储存网格数据的数字格式。虽然是为bathymetric/topographic开发的，但这个格式能应用于几乎所有的网格数据。GlobleMapper8及以上版本支持该格式。</p>
-<p>Geosoft Binary Grid Files<br>Geosoft Grid是一种二进制的网格格式，用于储存高程数据。此格式同时使用Geosoft’s Oasis Montaj操作。</p>
-<p>Global 2’ Elevation Data (ETOPO2)<br>一个新建的全局高程数据库（global elevation data base），以经纬度分辨率查看（gridded at latitude-longitude resolution）。ETOPO2包含了陆地数据（Global Land One-kilometer Base Elevation，GLOBE）和各种海底数据。<br>Global 30-arc-second Digital Elevation Data (GTOPO30)<br>GTOPO30数据由一些光栅数据和地形矢量资料组成。数据来源于一些美国国内组织据和国际组织，此数据与USGS DEM数据不同。<br>Gravsoft Grid Files<br>此格式是Gravsoft的套件工具，用于储存高程网格数据。Global Mapper10及以上版本可导入此格式的数据。</p>
-<p>HF2/HFZ Files<br>HF2是一种用于替代压缩地形格式（uncompressed terrain formats）的压缩高度场格式（compressed heightfield format），如HFF、TER和BT。<br>HTF (Hydrographic Transfer Format)<br>HTF主要用于澳大利亚的Australian Hydrographic Service (AHS)部门，该格式目前已经成为首选的AHS探测数据（sounding data）储存和分配格式。</p>
-<p>Hypack Matrix Files<br>Hypack Matrix格式一种网格格式，用于储存海洋测量的深海数据（bathymetric data）。Global Mapper11及以上版本支持该数据格式。Global Mapper 11及以上版本可以导入该格式文件。<br>Idrisi格式<br>Idrisi .rst是一种栅格数据格式，用于Clark Labs的Idrisi软件生产线。</p>
-<p>International Bathymetric Chart of the Arctic Ocean (IBCAO) Files<br>IBCAO格式是用来开发数字数据库（digital data base）的，适用于现有的所有bathymetric数据。Global Mapper以netCDF格式支持这种数据。</p>
-<p>Japanese DEM (JDEM/LEM/CSV) Format<br>JDEM .mem/.lem文件格式为Japanese Geographical Survey Institute提网格高程数据。Global Mapper11及以上版本支持该数据。</p>
-<p>LizardTech MrSID MG4 Lidar<br>该种格式可对Lidar数据集进行超高比例的压缩储存。Global Mapper11及以上版本支持该数据。</p>
-<p>NOAA TerrainBase Elevation Data<br>该数据格式支持NOAA National Geophysical Data Center里的所有数字地面模型（Digital Terrain Models）。</p>
-<p>NTF Grid/Contour Format<br>NTF Grid网格文件格式用于UK Ordnance Survey储存DEM格式数据和矢量数据。Global Mapper8及以上版本支持该格式的数据。</p>
-<p>PDS (Vicar) Files<br>PDS (Vicar)文件格式是二进制的网格格式，NASA通常用于储存行星数据（planetary data）。Global Mapper10.01及以上版本支持该格式的数据。</p>
-<p>PLS-CADD XYZ<br>PLS-CADD XYZ文件格式用于Power Line Systems的PLS-CADD程序储存矢量数据和网格高程数据。Global Mapper9.02及以上版本支持该格式的数据。</p>
-<p>QCT (Quick Chart) and QED Files<br>QCT和QED文件格式用作高度压缩的扫描地图（highly compressed scanned maps (QCD)）和高程数据文件，主要储存于类似PDA和便携GPS装置中。Global Mapper11及以上版本支持该格式的数据。</p>
-<p>STL文件<br>STL是一种由3D系统产生的立体印刷（stereolithography）CAD软件。此格式可用于多种软件包。Global Mapper各版本都支持该数据格式。</p>
+        <p>source/etc/profile是让/etc/profile文件修改后立即生效，</p>
+<p>还有一种方法是：. /etc/profile</p>
+<p>注意：.和/etc/profile有空格</p>
+<p>linux中source命令</p>
+<p>source命令也称为“点命令”也就是一个符号（.）.source命令通常用于重新执行刚修改的初始或文件，使之立即生效，而不必注销并重新登录。</p>
+<p>一、Linux的变量种类</p>
+<p>按变量的生存周期来划分，Linux变量可分为两类：</p>
+<ol>
+<li><p>永久的：需要修改配置文件，变量永久生效。</p>
+</li>
+<li><p>临时的：使用export命令行声明即可，变量在关闭shell时失效。</p>
+</li>
+</ol>
+<p>二、设置变量的三种方法</p>
+<ol>
+<li>在/etc/profile文件中添加变量【对所有用户生效（永久的）】</li>
+</ol>
+<p>用VI在文件/etc/profile文件中增加变量，该变量将会对Linux下所有用户有效，并且是“永久的”。</p>
+<p>例如：编辑/etc/profile文件，添加CLASSPATH变量</p>
+<h1 id="vi-etc-profile"><a href="#vi-etc-profile" class="headerlink" title="vi /etc/profile"></a>vi /etc/profile</h1><p>export CLASSPATH=./JAVA_HOME/lib;$JAVA_HOME/jre/lib</p>
+<p>注：修改文件后要想马上生效还要运行# source /etc/profile不然只能在下次重进此用户时生效。</p>
+<ol>
+<li>在用户目录下的.bash_profile文件中增加变量【对单一用户生效（永久的）】</li>
+</ol>
+<p>用VI在用户目录下的.bash_profile文件中增加变量，改变量仅会对当前用户有效，并且是“永久的”。</p>
+<p>例如：编辑guok用户目录（/home/guok）下的.bash_profile</p>
+<p>$ vi /home/guok/.bash.profile</p>
+<p>添加如下内容：</p>
+<p>export CLASSPATH=./JAVA_HOME/lib;$JAVA_HOME/jre/lib</p>
+<p>注：修改文件后要想马上生效还要运行$ source /home/guok/.bash_profile不然只能在下次重进此用户时生效。</p>
+<ol>
+<li>直接运行export命令定义变量【只对当前shell（BASH）有效（临时的）】</li>
+</ol>
+<p>在shell的命令行下直接使用[export变量名=变量值]定义变量，该变量只在当前的shell（BASH）或其子shell（BASH）下是有效的，shell关闭了，变量也就失效了，再打开新shell时就没有这个变量，需要使用的话还需要重新定义。<br>三、另外</p>
+<p>1.使用readonly命令设置只读变量，如果使用了readonly命令的话，变量就不可以被修改或清除了。</p>
+<p>2.使用unset命令来清除环境变量 $ unset TEMP_KEVIN #删除环境变量TEMP_KEVIN</p>
+<p><del>~</del><del>~</del><del>~</del><del>~</del><del>~</del><del>~</del><del>~</del><del>~</del><del>~</del><del>~</del>~~~</p>
+<p>用法： source filename 或. filename</p>
+<p>附：source命令除了上述的用途之外，还有一个用途。</p>
+<p>在对编译系统核心时常常需要输入一长串的命令，如：<br>make mrproper<br>make menuconfig<br>make dep<br>make clean<br>make bzImage<br>…………<br>如果把这些命令做成一个文件，让它自动顺序执行，对于需要多次反复编译系统核心的用户来说会很方便，而用source命令就可以做到这一点，它的作用就是把一个文件的内容当成shell来执行，先在linux的源代码目录下（如/usr/src/linux-2.4.20）建立一个文件，如make_command，在其中输入一下内容：<br>make mrproper &amp;&amp;<br>make menuconfig &amp;&amp;<br>make dep &amp;&amp;<br>make clean &amp;&amp;<br>make bzImage &amp;&amp;<br>make modules &amp;&amp;<br>make modules_install &amp;&amp;<br>cp arch/i386/boot/bzImage /boot/vmlinuz_new &amp;&amp;<br>cp System.map /boot &amp;&amp;<br>vi /etc/lilo.conf &amp;&amp;<br>lilo -v<br>文件建立好之后，每次编译核心的时候，只需要在/usr/src/linux-2.4.20下输入：<br>source make_command<br>即可，如果你用的不是lilo来引导系统，可以把最后两行去掉，配置自己的引导程序来引导内核。<br>顺便补充一点，&amp;&amp;命令表示顺序执行由它连接的命令，但是只有它之前的命令成功执行完成了之后才可以继续执行它后面的命令。</p>
 
       
     </div>
@@ -494,17 +530,13 @@ Geodas Grid (GRD98) Format这是用于储存网格数据">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/26/matplotlib的示例：调整字体-设置刻度、坐标、colormap和colorbar/" rel="next" title="matplotlib的示例：调整字体-设置刻度、坐标、colormap和colorbar">
-                <i class="fa fa-chevron-left"></i> matplotlib的示例：调整字体-设置刻度、坐标、colormap和colorbar
+              <a href="/2016/07/27/高程网格数据篇/" rel="next" title="高程网格数据篇">
+                <i class="fa fa-chevron-left"></i> 高程网格数据篇
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/07/30/设置环境变量永久生效和临时生效/" rel="prev" title="设置环境变量永久生效和临时生效">
-                设置环境变量永久生效和临时生效 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -604,7 +636,7 @@ Geodas Grid (GRD98) Format这是用于储存网格数据">
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#vi-etc-profile"><span class="nav-number">1.</span> <span class="nav-text">vi /etc/profile</span></a></li></ol></div>
             
           </div>
         </section>
