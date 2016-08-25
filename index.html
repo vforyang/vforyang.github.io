@@ -388,6 +388,189 @@
             
               
                 
+                <a class="post-title-link" href="/2016/08/25/Linux下设置定期执行脚本/" itemprop="url">
+                  Linux下设置定期执行脚本
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-25T17:35:55+08:00" content="2016-08-25">
+              2016-08-25
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>下面针对的是非ubuntu环境，会在文章末尾介绍ubuntu的一些区别。</p>
+<p>在Linux下，经常需要定期的执行一些脚本从而来实现一些功能。</p>
+<p>在Linux下我们用crontab来实现定期的执行脚本这个功能，下面就介绍一下crontab的使用。以及我遇到的一些问题</p>
+<p>一. crontab的使用说明</p>
+<ol>
+<li>crond 是linux用来定期执行程序的命令。当安装完成操作系统之后，默认便会启动此任务调度命令。crond命令每分钟会定期检查是否有要执行的工作，如果有要执行的工作便会自动执行该工作。而linux任务调度的工作主要分为以下两类</li>
+</ol>
+<p>a. 系统执行的工作，比如垃圾清理，备份</p>
+<p>b. 用户自定义的工作，比如每5分钟执行一次脚本</p>
+<ol>
+<li>crontab是UNIX系统下定期执行任务的触发器。用户把要定期执行的任务记录在这个文件下面，然后crond定期的去检查这个定期执行列表，有要执行的工作时便自动执行。</li>
+</ol>
+<p>通过man crontab可以查看到下面的信息</p>
+<p>a. /etc/crond.allow 表示的是允许使用crontab的用户列表</p>
+<p>b. /etc/crond.deny 表示的是不允许使用crontab的用户列表</p>
+<ol>
+<li>crontab常用的几个命令格式</li>
+</ol>
+<p>crontab -l //显示用户的crontab文件的内容</p>
+<p>crontab -e //编辑用户的crontab文件的内容</p>
+<p>crontab -r //删除用户的crontab文件</p>
+<ol>
+<li>crontab文件的基本格式如下所示</li>
+</ol>
+<ul>
+<li><ul>
+<li><ul>
+<li><ul>
+<li><ul>
+<li>command</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>分   时   天   月   周         命令</p>
+<p>每列表示意义</p>
+<p>a. 第一个<em>表示的是分钟1～59分钟，默认</em>表示的是每分钟都执行，x-y表示的是x～y这段每分钟都执行，*/n表示每n分钟执行一次，x,y,z表示的是x,y,z分钟都执行。</p>
+<p>b. 第二个<em>表示的是小时1~23小时，默认</em>表示的是每小时都执行，x-y表示的是x～y这段每小时都执行，*/n表示每n小时执行一次，x,y,z表示的是x,y,z小时都执行。</p>
+<p>c. 第三个<em>表示的是天1~31，默认</em>表示的是每天都执行，x-y表示的是x～y这段每天都执行，*/n表示每n天执行一次，x,y,z表示的是x,y,z天都执行。</p>
+<p>d. 第四个<em>表示的是月1～12，默认</em>表示的是每个月都执行，x-y表示的是x～y这个段每月都执行，*/n表示每n分钟执行一次，x,y,z表示的是x,y,z天都执行。</p>
+<p>e. 第五个*表示的是周0～6（0表示周天），默认周一～周天都执行，x-y表示周x～周y每天都执行。</p>
+<ol>
+<li>crontab文件的一些例子</li>
+</ol>
+<p>a. 30 21 <em> </em> * /usr/local/etc/rc.d/lighttpd restart //表示每天21：30重启apache</p>
+<p>b. 45 4 1,10,22 <em> </em> /usr/local/etc/rc.d/lighttpd restart //表示每月1，10，22号4：45重启apache</p>
+<p>c. 0,30 18-23 <em> </em> * /usr/local/etc/rc.d/lighttpd restart //表示每天18 : 00至23 : 00之间每隔30分钟重启apache</p>
+<p>d. <em> </em>/1 <em> </em> * /usr/local/etc/rc.d/lighttpd restart //表示每一小时重启apache</p>
+<p>e. <em>/5 </em> <em> </em> * /usr/local/etc/rc.d/lighttpd restart //表示每5分钟重启apache</p>
+<p>二. 具体例子</p>
+<ol>
+<li>首先我在/home/chenguolin/tmp/ 创建一个shell脚本名为s.sh。注意脚本内部的路径使用绝对路径。</li>
+</ol>
+<p>这个脚本的功能就是把当前的日期输出重定向到当前目录下的out文件</p>
+<ol>
+<li>然后设置每2分钟执行一次这个脚本，&gt;/dev/null 2&gt;&amp;1。原因是因为系统会在每次执行完任务之后就发一个邮件告诉用户，通过这个操作可以把信息全部重定向到/dev/null中， /dev/null这个文件类似回收站过一段时间系统自动清理。</li>
+</ol>
+<p><em>/2 </em> <em> </em> * sh /home/chenguolin/tmp/s.sh &gt;/dev/null 2&gt;&amp;1</p>
+<p>然后发现过了n个2分钟，out文件根本就没有输出。 </p>
+<ol>
+<li>在谷歌/百度无果之后，问了朋友，得到了原因是因为crontab可能有时候没有办法执行用户家目录下面的两个文件，分别是.bashrc和.bash_profile</li>
+</ol>
+<p>这两个文件的作用如下</p>
+<p>.bashrc作用是用于你的bash shell的bash信息,当登录时及每次打开新的shell时,该文件被读取；</p>
+<p>.bash_profile作用是每个用户都可使用该文件输入专用于自己使用的shell信息，当用户登录时，该文件仅仅执行一次！默认情况下，他设置一些环境变量，执行用户的.bashrc文件，</p>
+<p>因此我们要手动在crontab文件中添加source /home/chenguolin/.bashrc &amp;&amp; source /home/chenguolin/.bash_profile</p>
+<p>source的作用是当前bash环境下执行命令，而scripts是启动一个子shell来执行命令。这样如果把设置环境变量（或alias等 等）的命令写进scripts中，就只会影响子shell,无法改变当前的BASH,所以通过文件（命令列）设置环境变量时，要用source 命令。</p>
+<p>因此crontab文件中变成</p>
+<p><em>/2 </em> <em> </em> * source &amp;&amp; /home/chenguolin/.bashrc &amp;&amp; source /home/chenguolin/.bash_profile &amp;&amp; sh /home/chenguolin/tmp/s.sh &gt;/dev/null 2&gt;&amp;1</p>
+<ol>
+<li>发现可以定时的执行脚本。</li>
+</ol>
+<p>如果还不行，那只能通过查找log来查错。非ubuntu的Linux crond的日志文件保存在/var/log下</p>
+<p>三. ubuntu下使用crontab定时执行脚本<br>注意下几个问题以</p>
+<ol>
+<li>ubuntu下crontab的服务程序是cron，并且默认cron服务的log是没有的，我们必须手动开启</li>
+</ol>
+<p>a. sudo vim /etc/rsyslog.d/50-default.conf</p>
+<p>b. 找到cron.*那一行把注释去掉</p>
+<p>c. 然后重启cron服务 sudo service cron restart</p>
+<p>d. 这样就可以在/var/log里面发现有cron的日志文件了，我们就可以通过查看日志文件找到问题所在</p>
+<ol>
+<li>ubuntu下，用户家目录下是没有.bash_profile文件的，并且会自动去执行.bashrc文件，只要写成下面这样即可</li>
+</ol>
+<p><em>/2 </em> <em> </em> * sh /home/chenguolin/tmp/s.sh &gt;/dev/null 2&gt;&amp;1</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/08/25/ubuntu-SSH-连接、远程上传下载文件/" itemprop="url">
                   ubuntu SSH 连接、远程上传下载文件
                 </a>
@@ -1112,7 +1295,7 @@ plt.clf()#清除图形
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
