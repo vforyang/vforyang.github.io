@@ -84,19 +84,28 @@
 
 
 
-<meta name="description" content="Q:I am running a python script and I get this error:
-Intel MKL FATAL ERROR: Cannot load libmkl_avx2.so or libmkl_def.so.Both files are present in the anaconda2/lib directory. How can I fix this error?">
+<meta name="description" content="import matplotlib
+Force matplotlib to not use any Xwindows backend.matplotlib.use(‘Agg’)
+or 
+ust as a complement of Reinout’s answer.
+The permanent way to solve this kind of problem is to edit .matplo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Intel MKL FATAL ERROR">
-<meta property="og:url" content="http://dvmn.com/2016/09/08/Intel-MKL-FATAL-ERROR/index.html">
+<meta property="og:title" content="Using Matplotlib when DISPLAY is undefined">
+<meta property="og:url" content="http://dvmn.com/2016/09/12/Using-Matplotlib-when-DISPLAY-is-undefined/index.html">
 <meta property="og:site_name" content="重力在线 OnGra">
-<meta property="og:description" content="Q:I am running a python script and I get this error:
-Intel MKL FATAL ERROR: Cannot load libmkl_avx2.so or libmkl_def.so.Both files are present in the anaconda2/lib directory. How can I fix this error?">
-<meta property="og:updated_time" content="2016-09-08T01:41:03.021Z">
+<meta property="og:description" content="import matplotlib
+Force matplotlib to not use any Xwindows backend.matplotlib.use(‘Agg’)
+or 
+ust as a complement of Reinout’s answer.
+The permanent way to solve this kind of problem is to edit .matplo">
+<meta property="og:updated_time" content="2016-09-12T01:55:29.488Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Intel MKL FATAL ERROR">
-<meta name="twitter:description" content="Q:I am running a python script and I get this error:
-Intel MKL FATAL ERROR: Cannot load libmkl_avx2.so or libmkl_def.so.Both files are present in the anaconda2/lib directory. How can I fix this error?">
+<meta name="twitter:title" content="Using Matplotlib when DISPLAY is undefined">
+<meta name="twitter:description" content="import matplotlib
+Force matplotlib to not use any Xwindows backend.matplotlib.use(‘Agg’)
+or 
+ust as a complement of Reinout’s answer.
+The permanent way to solve this kind of problem is to edit .matplo">
 
 
 
@@ -117,9 +126,9 @@ Intel MKL FATAL ERROR: Cannot load libmkl_avx2.so or libmkl_def.so.Both files ar
 
 
 
-  <link rel="canonical" href="http://dvmn.com/2016/09/08/Intel-MKL-FATAL-ERROR/"/>
+  <link rel="canonical" href="http://dvmn.com/2016/09/12/Using-Matplotlib-when-DISPLAY-is-undefined/"/>
 
-  <title> Intel MKL FATAL ERROR | 重力在线 OnGra </title>
+  <title> Using Matplotlib when DISPLAY is undefined | 重力在线 OnGra </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -389,7 +398,7 @@ Intel MKL FATAL ERROR: Cannot load libmkl_avx2.so or libmkl_def.so.Both files ar
             
             
               
-                Intel MKL FATAL ERROR
+                Using Matplotlib when DISPLAY is undefined
               
             
           </h1>
@@ -401,8 +410,8 @@ Intel MKL FATAL ERROR: Cannot load libmkl_avx2.so or libmkl_def.so.Both files ar
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-08T09:39:47+08:00" content="2016-09-08">
-              2016-09-08
+            <time itemprop="dateCreated" datetime="2016-09-12T09:54:23+08:00" content="2016-09-12">
+              2016-09-12
             </time>
           </span>
 
@@ -429,12 +438,19 @@ Intel MKL FATAL ERROR: Cannot load libmkl_avx2.so or libmkl_def.so.Both files ar
       
 
       
-        <p>Q:<br>I am running a python script and I get this error:</p>
-<p>Intel MKL FATAL ERROR: Cannot load libmkl_avx2.so or libmkl_def.so.<br>Both files are present in the anaconda2/lib directory. How can I fix this error? Thanks.</p>
-<p>A:<br>if you use conda , try with two commands</p>
-<p>conda install nomkl numpy scipy scikit-learn numexpr</p>
-<p>conda remove mkl mkl-service</p>
-<p>It should fix your problem</p>
+        <p>import matplotlib</p>
+<h1 id="Force-matplotlib-to-not-use-any-Xwindows-backend"><a href="#Force-matplotlib-to-not-use-any-Xwindows-backend" class="headerlink" title="Force matplotlib to not use any Xwindows backend."></a>Force matplotlib to not use any Xwindows backend.</h1><p>matplotlib.use(‘Agg’)</p>
+<p>or </p>
+<p>ust as a complement of Reinout’s answer.</p>
+<p>The permanent way to solve this kind of problem is to edit .matplotlibrc file. Find it via</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>import matplotlib<br>matplotlib.matplotlib_fname()</p>
+<h1 id="This-is-the-file-location-in-Ubuntu"><a href="#This-is-the-file-location-in-Ubuntu" class="headerlink" title="This is the file location in Ubuntu"></a>This is the file location in Ubuntu</h1><p>‘/etc/matplotlibrc’<br>Then modify the backend in that file to Agg. That is it.</p>
+</blockquote>
+</blockquote>
+</blockquote>
 
       
     </div>
@@ -481,17 +497,13 @@ Intel MKL FATAL ERROR: Cannot load libmkl_avx2.so or libmkl_def.so.Both files ar
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/25/Linux下设置定期执行脚本/" rel="next" title="Linux下设置定期执行脚本">
-                <i class="fa fa-chevron-left"></i> Linux下设置定期执行脚本
+              <a href="/2016/09/12/ssh自动登录的4种实现方法/" rel="next" title="ssh自动登录的4种实现方法">
+                <i class="fa fa-chevron-left"></i> ssh自动登录的4种实现方法
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/09/12/libSM-so-6-cannot-open-shared-object-file-No-such-file-or-directory/" rel="prev" title="libSM.so.6: cannot open shared object file: No such file or directory">
-                libSM.so.6: cannot open shared object file: No such file or directory <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -591,7 +603,7 @@ Intel MKL FATAL ERROR: Cannot load libmkl_avx2.so or libmkl_def.so.Both files ar
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Force-matplotlib-to-not-use-any-Xwindows-backend"><span class="nav-number">1.</span> <span class="nav-text">Force matplotlib to not use any Xwindows backend.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#This-is-the-file-location-in-Ubuntu"><span class="nav-number">2.</span> <span class="nav-text">This is the file location in Ubuntu</span></a></li></ol></div>
             
           </div>
         </section>
