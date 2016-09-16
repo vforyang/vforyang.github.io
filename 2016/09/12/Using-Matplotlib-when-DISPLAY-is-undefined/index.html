@@ -87,8 +87,7 @@
 <meta name="description" content="import matplotlib
 Force matplotlib to not use any Xwindows backend.matplotlib.use(‘Agg’)
 or 
-ust as a complement of Reinout’s answer.
-The permanent way to solve this kind of problem is to edit .matplo">
+This is a configuration issue with matplotlib, the library that QIIME uses for generating plots. You might">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Using Matplotlib when DISPLAY is undefined">
 <meta property="og:url" content="http://dvmn.com/2016/09/12/Using-Matplotlib-when-DISPLAY-is-undefined/index.html">
@@ -96,16 +95,14 @@ The permanent way to solve this kind of problem is to edit .matplo">
 <meta property="og:description" content="import matplotlib
 Force matplotlib to not use any Xwindows backend.matplotlib.use(‘Agg’)
 or 
-ust as a complement of Reinout’s answer.
-The permanent way to solve this kind of problem is to edit .matplo">
-<meta property="og:updated_time" content="2016-09-12T01:55:29.488Z">
+This is a configuration issue with matplotlib, the library that QIIME uses for generating plots. You might">
+<meta property="og:updated_time" content="2016-09-16T10:24:00.679Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Using Matplotlib when DISPLAY is undefined">
 <meta name="twitter:description" content="import matplotlib
 Force matplotlib to not use any Xwindows backend.matplotlib.use(‘Agg’)
 or 
-ust as a complement of Reinout’s answer.
-The permanent way to solve this kind of problem is to edit .matplo">
+This is a configuration issue with matplotlib, the library that QIIME uses for generating plots. You might">
 
 
 
@@ -441,16 +438,18 @@ The permanent way to solve this kind of problem is to edit .matplo">
         <p>import matplotlib</p>
 <h1 id="Force-matplotlib-to-not-use-any-Xwindows-backend"><a href="#Force-matplotlib-to-not-use-any-Xwindows-backend" class="headerlink" title="Force matplotlib to not use any Xwindows backend."></a>Force matplotlib to not use any Xwindows backend.</h1><p>matplotlib.use(‘Agg’)</p>
 <p>or </p>
-<p>ust as a complement of Reinout’s answer.</p>
-<p>The permanent way to solve this kind of problem is to edit .matplotlibrc file. Find it via</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>import matplotlib<br>matplotlib.matplotlib_fname()</p>
-<h1 id="This-is-the-file-location-in-Ubuntu"><a href="#This-is-the-file-location-in-Ubuntu" class="headerlink" title="This is the file location in Ubuntu"></a>This is the file location in Ubuntu</h1><p>‘/etc/matplotlibrc’<br>Then modify the backend in that file to Agg. That is it.</p>
-</blockquote>
-</blockquote>
-</blockquote>
+<p>This is a configuration issue with matplotlib, the library that QIIME uses for generating plots. You might want to work with your system administrator on this, as I’m not sure if there is a specific reason for this configuration. Your current matplotlib backend is set to qt4agg, which requires there to be an active display, but you don’t have an active display (as indicated by there being no result when you called echo $DISPLAY). </p>
+<p>To get around this, you should first check if you have a matplotlibrc file. You can do this by running:</p>
+<p>python -c “import matplotlib; print(matplotlib.matplotlib_fname())”</p>
+<p>If that returns a filepath, you’ll want to look for a line in that file that contains this:</p>
+<p>backend : qt4agg</p>
+<p>I would created a backup of that file, and then (in the original copy) replace that line with:</p>
+<p>backend : agg</p>
+<p>If you don’t already have a matplotlibrc file, you can create one at $HOME/.matplotlib/matplotlibrc. That file should contain only the line:</p>
+<p>backend : agg</p>
+<p>As I mentioned, you might want to talk with your system administrator about this before making any changes. </p>
+<p>Sorry for the trouble - I realize this is a bit of a complicated fix, but it does seem to be a server/matplotlib configuration issue, not an issue that is specific to QIIME. </p>
+<p>If you could get back to me to let me know if that works, that would be very useful in case other users run into this in the future.</p>
 
       
     </div>
@@ -575,7 +574,7 @@ The permanent way to solve this kind of problem is to edit .matplo">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-count">13</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -607,7 +606,7 @@ The permanent way to solve this kind of problem is to edit .matplo">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Force-matplotlib-to-not-use-any-Xwindows-backend"><span class="nav-number">1.</span> <span class="nav-text">Force matplotlib to not use any Xwindows backend.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#This-is-the-file-location-in-Ubuntu"><span class="nav-number">2.</span> <span class="nav-text">This is the file location in Ubuntu</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Force-matplotlib-to-not-use-any-Xwindows-backend"><span class="nav-number">1.</span> <span class="nav-text">Force matplotlib to not use any Xwindows backend.</span></a></li></ol></div>
             
           </div>
         </section>
