@@ -84,25 +84,19 @@
 
 
 
-<meta name="description" content="import matplotlib
-Force matplotlib to not use any Xwindows backend.matplotlib.use(‘Agg’)
-or 
-This is a configuration issue with matplotlib, the library that QIIME uses for generating plots. You might">
+<meta name="description" content="虽然很多人对投行的那套方法嗤之以鼻，但我仍然将一些我所了解到的，他们做估值的步骤写出来。虽然价值投资者可不屑，但下面我要写的这些步骤，清单至少是系统的，能够帮助投资者对公司在市场上的估值有一个基本的思路，而不是迷茫的，想到什么是什么，天马行空的进行估值，动不动像国内分析师一般，给予某股70倍PE，5倍PB。
+第一步、寻找标的。市场出现了一家新公司哎！你想了解这家公司。如果你是A股投资者我们选用$永">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Using Matplotlib when DISPLAY is undefined">
-<meta property="og:url" content="http://one2one.cn/2016/09/12/Using-Matplotlib-when-DISPLAY-is-undefined/index.html">
+<meta property="og:title" content="估值入门】假想自己是投行，按照清单做估值（初级篇）">
+<meta property="og:url" content="http://one2one.cn/2016/10/03/估值入门】假想自己是投行，按照清单做估值（初级篇）/index.html">
 <meta property="og:site_name" content="一二一量化投资 one2one">
-<meta property="og:description" content="import matplotlib
-Force matplotlib to not use any Xwindows backend.matplotlib.use(‘Agg’)
-or 
-This is a configuration issue with matplotlib, the library that QIIME uses for generating plots. You might">
-<meta property="og:updated_time" content="2016-09-16T10:24:00.679Z">
+<meta property="og:description" content="虽然很多人对投行的那套方法嗤之以鼻，但我仍然将一些我所了解到的，他们做估值的步骤写出来。虽然价值投资者可不屑，但下面我要写的这些步骤，清单至少是系统的，能够帮助投资者对公司在市场上的估值有一个基本的思路，而不是迷茫的，想到什么是什么，天马行空的进行估值，动不动像国内分析师一般，给予某股70倍PE，5倍PB。
+第一步、寻找标的。市场出现了一家新公司哎！你想了解这家公司。如果你是A股投资者我们选用$永">
+<meta property="og:updated_time" content="2016-10-03T09:45:02.072Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Using Matplotlib when DISPLAY is undefined">
-<meta name="twitter:description" content="import matplotlib
-Force matplotlib to not use any Xwindows backend.matplotlib.use(‘Agg’)
-or 
-This is a configuration issue with matplotlib, the library that QIIME uses for generating plots. You might">
+<meta name="twitter:title" content="估值入门】假想自己是投行，按照清单做估值（初级篇）">
+<meta name="twitter:description" content="虽然很多人对投行的那套方法嗤之以鼻，但我仍然将一些我所了解到的，他们做估值的步骤写出来。虽然价值投资者可不屑，但下面我要写的这些步骤，清单至少是系统的，能够帮助投资者对公司在市场上的估值有一个基本的思路，而不是迷茫的，想到什么是什么，天马行空的进行估值，动不动像国内分析师一般，给予某股70倍PE，5倍PB。
+第一步、寻找标的。市场出现了一家新公司哎！你想了解这家公司。如果你是A股投资者我们选用$永">
 
 
 
@@ -123,9 +117,9 @@ This is a configuration issue with matplotlib, the library that QIIME uses for g
 
 
 
-  <link rel="canonical" href="http://one2one.cn/2016/09/12/Using-Matplotlib-when-DISPLAY-is-undefined/"/>
+  <link rel="canonical" href="http://one2one.cn/2016/10/03/估值入门】假想自己是投行，按照清单做估值（初级篇）/"/>
 
-  <title> Using Matplotlib when DISPLAY is undefined | 一二一量化投资 one2one </title>
+  <title> 估值入门】假想自己是投行，按照清单做估值（初级篇） | 一二一量化投资 one2one </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -395,7 +389,7 @@ This is a configuration issue with matplotlib, the library that QIIME uses for g
             
             
               
-                Using Matplotlib when DISPLAY is undefined
+                估值入门】假想自己是投行，按照清单做估值（初级篇）
               
             
           </h1>
@@ -407,8 +401,8 @@ This is a configuration issue with matplotlib, the library that QIIME uses for g
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-12T09:54:23+08:00" content="2016-09-12">
-              2016-09-12
+            <time itemprop="dateCreated" datetime="2016-10-03T17:44:36+08:00" content="2016-10-03">
+              2016-10-03
             </time>
           </span>
 
@@ -435,21 +429,23 @@ This is a configuration issue with matplotlib, the library that QIIME uses for g
       
 
       
-        <p>import matplotlib</p>
-<h1 id="Force-matplotlib-to-not-use-any-Xwindows-backend"><a href="#Force-matplotlib-to-not-use-any-Xwindows-backend" class="headerlink" title="Force matplotlib to not use any Xwindows backend."></a>Force matplotlib to not use any Xwindows backend.</h1><p>matplotlib.use(‘Agg’)</p>
-<p>or </p>
-<p>This is a configuration issue with matplotlib, the library that QIIME uses for generating plots. You might want to work with your system administrator on this, as I’m not sure if there is a specific reason for this configuration. Your current matplotlib backend is set to qt4agg, which requires there to be an active display, but you don’t have an active display (as indicated by there being no result when you called echo $DISPLAY). </p>
-<p>To get around this, you should first check if you have a matplotlibrc file. You can do this by running:</p>
-<p>python -c “import matplotlib; print(matplotlib.matplotlib_fname())”</p>
-<p>If that returns a filepath, you’ll want to look for a line in that file that contains this:</p>
-<p>backend : qt4agg</p>
-<p>I would created a backup of that file, and then (in the original copy) replace that line with:</p>
-<p>backend : agg</p>
-<p>If you don’t already have a matplotlibrc file, you can create one at $HOME/.matplotlib/matplotlibrc. That file should contain only the line:</p>
-<p>backend : agg</p>
-<p>As I mentioned, you might want to talk with your system administrator about this before making any changes. </p>
-<p>Sorry for the trouble - I realize this is a bit of a complicated fix, but it does seem to be a server/matplotlib configuration issue, not an issue that is specific to QIIME. </p>
-<p>If you could get back to me to let me know if that works, that would be very useful in case other users run into this in the future.</p>
+        <p>虽然很多人对投行的那套方法嗤之以鼻，但我仍然将一些我所了解到的，他们做估值的步骤写出来。虽然价值投资者可不屑，但下面我要写的这些步骤，清单至少是系统的，能够帮助投资者对公司在市场上的估值有一个基本的思路，而不是迷茫的，想到什么是什么，天马行空的进行估值，动不动像国内分析师一般，给予某股70倍PE，5倍PB。</p>
+<p>第一步、寻找标的。<br>市场出现了一家新公司哎！你想了解这家公司。如果你是A股投资者我们选用$永辉超市(SH601933)$  ,如果你投资美股我们选用$PPG Industries(PPG)$  作为标的。</p>
+<p>第二步、选择同行业其他公司<br>对于投行/PE这些机构来说，估值很多时候不是孤立的，而是比较产生的，和市场息息相关的。当你接触到陌生的公司时，你首先要在市场上找其他同类型的公司做比较，才能大致了解情况。<br>以A股永辉为例，他属于“超市”的细分行业。在整个A股市场目前有8家类似的上市公司可供参考。</p>
+<p>以美股的PPG为例，他属于“涂料”行业，我们找到12家类似的上市公司作为参考。</p>
+<p>第三步、获取同业的财务信息<br>选择与你研究表的规模，门店数量，员工数等差不多3到4家公司进行类比，同时从A股的年报/美股的10K,10Q报告中获得以下数据：销售额，毛利率，EBITDA，净利润，净现金，负债，净资产，现金流量表，折旧摊销，资本性支持（Capex），总市值，普通股数，分红情况，美股的信用评级。</p>
+<p>第四步、获得通用比率or乘数（ratio/mutiples）。<br>大家估值中经常用到的pe,p/s,负债率，就是所谓的比率or乘数。当你选定完公司后，你需要计算他们的各项数据。比如，我选择了永辉超市的竞争对手，华联综超，红旗连锁进行对比。此时我要他们的那些关键性数据进行类比呢？<br>首先是找到通用性的财务乘数，就是和行业无关的，无论哪个行业大家都会比较的部分。<br>1、市销率<br>2、市盈率<br>3、市净率<br>4、EV（企业价值）/EBITDA（息税折旧摊销前利润）<br>EV=市值+负债-现金<br>5、毛利率<br>6、净利润率<br>7、ROE（净资产收益率）<br>8、ROA（总资产收益率）<br>9、股息率<br>10、负债率<br>11、速动比率、流动比率<br>12、自由现金流，运营现金流<br>这12个是无论什么行业都必须要计算的，一个都不能少的可比项目。按照清单将你所选取的标的，比如永辉超市，加上他的两个竞争对手一起，进行逐项计算。<br>计算完成后制Excel表格备查。</p>
+<p>第五步、获得行业特殊比率/乘数<br>对于不同的行业，有一些特殊的指标，考察这个行业独特的盈利能力的。每个行业各有不同，具体请参看我上一篇文章：<a href="http://xueqiu.com/7813497513/58140858" target="_blank" rel="external">http://xueqiu.com/7813497513/58140858</a><br>以我前面所提到的例子，永辉超市为例，他是零售业/超市行业，对于这个行业，我们还需要计算的这个行业特殊比率/乘数为：<br>1、息税折旧摊销，租金前利润。<br>2、平均每平方米销售额/利润<br>3、持有物业平方米数<br>4、存货周转率<br>5、总资产周转率<br>同样的，计算完成后制Excel表格备查</p>
+<p>第六步、获得这些公司的信用评级（美股专用）<br>我们以前面举例的美股公司PPG为例，在穆迪上可以找到他的信用评级：</p>
+<p>我们可以在网站上看到，穆迪在2015年5月6日对其发行的一项票据做了Baa1的信用评级。（穆迪的网站肿么找，不用教了吧？）</p>
+<p>第七步、对公司进行定性的调查<br>在计算完备查的数据后，开始对这家公司所处的行业地位进行调查。比如：是否有三大门槛？（技术壁垒，规模壁垒，资金进入门槛），有无三大能力？（议价能力，提价能力，进一步压缩成本的能力），管理层是否专业，人员是否冗余，公司对高管发放的津贴是否合理。类似对公司做一次全面的尽职调查。</p>
+<p>第八步、确定标的公司的乘数/比率<br>做完定性调查之后，假如你发现，$永辉超市(SH601933)$  无论是成长性，还是运营能力，比行业整理水平要高（只是假如哦），这时，你可以按照高于行业标准的估值乘数/比率给予估值<br>比如，行业对超市的平均市销率是0.6倍左右，如果你认同你所选择的标的，永辉是好于行业整体水平的，那么你可以给1倍的市销率。<br>行业平均的EV/EBITDA为5.5倍，你认为永辉好于整体水平，那你可以给6.5倍到8.5倍的乘数。<br>然后用你的“理想估值”，和现实的永辉超市的估值作比较，看看它目前是偏高还是偏低。<br>特别注意：前面所提到的市销率1倍，EV/EBITDA给予6.5倍~8.5倍，不能是拍脑袋给的。定性分析，要以定量分析做附注。什么样的情况允许你给出高于行业平均的估值呢？我认为有以下方面：<br>1，对于零售行业，毛利率比别人领先3到5个点，已非常了不起，类似PPG这样的涂料行业，是否能领先10个点的毛利。<br>2、所针对的细分市场能否高于行业平均增长？比如综超行业，目前一线城市竞争已经白热化，疲软化，而三四线城市增长仍然是两位数，那么，根据增速的高低，对于集中进攻三四线城市的，给予一定量的高估值。<br>3、对于高速成长期公司，适当的放宽特色标准，还是以零售业为例，平均每平方米销售额，单店销售额等。由于公司在某年扩张较快，一些已扩张的门店没有进入真正的运营状态，可以适当的放款对其标准，不要求单店销售额，每平米销售额增长。</p>
+<p>第九步，利用上面的估值，给公司确定安全边际。</p>
+<p>第十步，进行理想化的现金流折现（DCF）模型分析，确定更精确的价值，更细化的安全边际</p>
+<p>按照公式：<br>PV = CF1 / (1+k) + CF2 / (1+k)2 + … ［TCF / (k - g)］ / (1+k)n-1<br>PV：折现后的公司价值<br>CF：现金流<br>K：贴现率<br>TCF：现金流终值<br>g：永续增长率预测值，一般根据前面的“定性分析”，给予同GDP增速预测，高于GDP一倍增速预测，高于GDP2倍增速预测等。<br>n：折现年限（我喜欢选择10年的）<br>恩，关于这个模型这里讲就太复杂了，未来会专门开辟出一个专题讲的，雪球也有很多大神讲过了，未必需要我多嘴，啦啦啦。</p>
+<p>第十一步，制表，存档。<br>之所以要让投资人制表，存档，不仅是为了比较和查看的方便，而是留下你当时估值的证据。如果你用这些证据，对公司进行了估值并认为低估，而买入了股票。那么，牢记这些证据，不被一个季度的季报，几个涨停/跌停而改变世界观，直到你估值的那些基础情况改变了，再做持仓的改变，就变得非常重要。</p>
+<p>以上。<br>应该就这么多了，本文脑补完成，可能有遗漏，希望专业人士补充。<br>之所以要列出清单进行估值，就是防止个人的“任意妄为”，经常看到自己喜欢的公司，遗漏了这个，遗漏了那个，造成投资损失。<br>声明：本人不吃持有以上标的。转载务必注明来自雪球徐佳杰Pierre，违者必究。</p>
+<p>作者：徐佳杰Pierre<br>链接：<a href="https://xueqiu.com/7813497513/58294137" target="_blank" rel="external">https://xueqiu.com/7813497513/58294137</a><br>来源：雪球<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 
       
     </div>
@@ -496,16 +492,16 @@ This is a configuration issue with matplotlib, the library that QIIME uses for g
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/09/12/ssh自动登录的4种实现方法/" rel="next" title="ssh自动登录的4种实现方法">
-                <i class="fa fa-chevron-left"></i> ssh自动登录的4种实现方法
+              <a href="/2016/10/03/我是如何选中长线股的-静态选股指标详解/" rel="next" title="我是如何选中长线股的-------静态选股指标详解">
+                <i class="fa fa-chevron-left"></i> 我是如何选中长线股的-------静态选股指标详解
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/09/12/利用scp传输文件/" rel="prev" title="利用scp传输文件">
-                利用scp传输文件 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/10/03/几种低风险投资招术/" rel="prev" title="几种低风险投资招术">
+                几种低风险投资招术 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -574,7 +570,7 @@ This is a configuration issue with matplotlib, the library that QIIME uses for g
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -606,7 +602,7 @@ This is a configuration issue with matplotlib, the library that QIIME uses for g
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Force-matplotlib-to-not-use-any-Xwindows-backend"><span class="nav-number">1.</span> <span class="nav-text">Force matplotlib to not use any Xwindows backend.</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>

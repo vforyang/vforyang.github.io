@@ -1,0 +1,755 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="作者：编程浪子         投资二级市场的回报无外乎来自三个方面：公司内在价值的提升+市场估值的提升+拿到手的分红。         而公司的内在价值，按绝对评估法就等于未来所有自由现金流的现值之和。当然这个方法只是理论上的，可远观而不可亵玩焉，实际上没有什么用处，因为未来自由现金流基本无法估计，接口极其不友好。       于是就产生了相对评估法，其中最著名的就是两个比率：市盈率和市净率。如">
+<meta property="og:type" content="article">
+<meta property="og:title" content="雷氏三击获利法之资产篇">
+<meta property="og:url" content="http://one2one.cn/2016/10/03/雷氏三击获利法之资产篇/index.html">
+<meta property="og:site_name" content="一二一量化投资 one2one">
+<meta property="og:description" content="作者：编程浪子         投资二级市场的回报无外乎来自三个方面：公司内在价值的提升+市场估值的提升+拿到手的分红。         而公司的内在价值，按绝对评估法就等于未来所有自由现金流的现值之和。当然这个方法只是理论上的，可远观而不可亵玩焉，实际上没有什么用处，因为未来自由现金流基本无法估计，接口极其不友好。       于是就产生了相对评估法，其中最著名的就是两个比率：市盈率和市净率。如">
+<meta property="og:updated_time" content="2016-10-03T09:41:35.510Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="雷氏三击获利法之资产篇">
+<meta name="twitter:description" content="作者：编程浪子         投资二级市场的回报无外乎来自三个方面：公司内在价值的提升+市场估值的提升+拿到手的分红。         而公司的内在价值，按绝对评估法就等于未来所有自由现金流的现值之和。当然这个方法只是理论上的，可远观而不可亵玩焉，实际上没有什么用处，因为未来自由现金流基本无法估计，接口极其不友好。       于是就产生了相对评估法，其中最著名的就是两个比率：市盈率和市净率。如">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://one2one.cn/2016/10/03/雷氏三击获利法之资产篇/"/>
+
+  <title> 雷氏三击获利法之资产篇 | 一二一量化投资 one2one </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">一二一量化投资 one2one</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Stock introduction</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+     <li> <a title="把这个链接拖到你的Chrome收藏夹工具栏中" href='javascript:(function() {
+    function c() {
+        var e = document.createElement("link");
+        e.setAttribute("type", "text/css");
+        e.setAttribute("rel", "stylesheet");
+        e.setAttribute("href", f);
+        e.setAttribute("class", l);
+        document.body.appendChild(e)
+    }
+ 
+    function h() {
+        var e = document.getElementsByClassName(l);
+        for (var t = 0; t < e.length; t++) {
+            document.body.removeChild(e[t])
+        }
+    }
+ 
+    function p() {
+        var e = document.createElement("div");
+        e.setAttribute("class", a);
+        document.body.appendChild(e);
+        setTimeout(function() {
+            document.body.removeChild(e)
+        }, 100)
+    }
+ 
+    function d(e) {
+        return {
+            height : e.offsetHeight,
+            width : e.offsetWidth
+        }
+    }
+ 
+    function v(i) {
+        var s = d(i);
+        return s.height > e && s.height < n && s.width > t && s.width < r
+    }
+ 
+    function m(e) {
+        var t = e;
+        var n = 0;
+        while (!!t) {
+            n += t.offsetTop;
+            t = t.offsetParent
+        }
+        return n
+    }
+ 
+    function g() {
+        var e = document.documentElement;
+        if (!!window.innerWidth) {
+            return window.innerHeight
+        } else if (e && !isNaN(e.clientHeight)) {
+            return e.clientHeight
+        }
+        return 0
+    }
+ 
+    function y() {
+        if (window.pageYOffset) {
+            return window.pageYOffset
+        }
+        return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+    }
+ 
+    function E(e) {
+        var t = m(e);
+        return t >= w && t <= b + w
+    }
+ 
+    function S() {
+        var e = document.createElement("audio");
+        e.setAttribute("class", l);
+        e.src = i;
+        e.loop = false;
+        e.addEventListener("canplay", function() {
+            setTimeout(function() {
+                x(k)
+            }, 500);
+            setTimeout(function() {
+                N();
+                p();
+                for (var e = 0; e < O.length; e++) {
+                    T(O[e])
+                }
+            }, 15500)
+        }, true);
+        e.addEventListener("ended", function() {
+            N();
+            h()
+        }, true);
+        e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
+        document.body.appendChild(e);
+        e.play()
+    }
+ 
+    function x(e) {
+        e.className += " " + s + " " + o
+    }
+ 
+    function T(e) {
+        e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
+    }
+ 
+    function N() {
+        var e = document.getElementsByClassName(s);
+        var t = new RegExp("\\b" + s + "\\b");
+        for (var n = 0; n < e.length; ) {
+            e[n].className = e[n].className.replace(t, "")
+        }
+    }
+ 
+    var e = 30;
+    var t = 30;
+    var n = 350;
+    var r = 350;
+    var i = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake.mp3";
+    var s = "mw-harlem_shake_me";
+    var o = "im_first";
+    var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
+    var a = "mw-strobe_light";
+    var f = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css";
+    var l = "mw_added_css";
+    var b = g();
+    var w = y();
+    var C = document.getElementsByTagName("*");
+    var k = null;
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            if (E(A)) {
+                k = A;
+                break
+            }
+        }
+    }
+    if (A === null) {
+        console.warn("Could not find a node of the right size. Please try a different page.");
+        return
+    }
+    c();
+    S();
+    var O = [];
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            O.push(A)
+        }
+    }
+})()    '>High一下</a> </li>
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                雷氏三击获利法之资产篇
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-03T17:40:52+08:00" content="2016-10-03">
+              2016-10-03
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>作者：编程浪子<br>         投资二级市场的回报无外乎来自三个方面：公司内在价值的提升+市场估值的提升+拿到手的分红。<br>         而公司的内在价值，按绝对评估法就等于未来所有自由现金流的现值之和。当然这个方法只是理论上的，可远观而不可亵玩焉，实际上没有什么用处，因为未来自由现金流基本无法估计，接口极其不友好。<br>       于是就产生了相对评估法，其中最著名的就是两个比率：市盈率和市净率。如果说自由现金流是汇编语言，那么市盈率是市净率就是C语言了，界面相对友好多了。<br>       在这种相对估值法中，对于公司的内在价值，我们就会寻找一个合理的比率乘以其相应的财务指标（盈利或者资产）来表示，而且对于一个可评估的公司，这个合理的比率在一定时期内不会有太大的变化。<br>      自然而然的我们就用这两个比率当前值来表示市场对公司的估值。只是一个是从盈利的角度，强调是的资产的未来增量，如同在林的鸟儿，这就是市盈率；一个是从资产的角度，强调是资产的当前现量，如同在手中的鸟儿，这就是市净率。稳健的投资者常说二鸟在林不如一鸟在手，所以往往喜欢从资产的角度的去看一家公司值不值得投资；而进取的人常常说舍不得孩子套不着狼，所以往往从盈利的角度去看一家公司值不值得投资。</p>
+<p>（当我们不考虑一项资产的获利能力，或者说一项资产的获利能力和社会的平均获利能力差不多，那么该资产合理定价就该资产的现价，即1倍PB – 实际上由于资本的逐利本性和水往低处流的原理，很少有资产能长期明显高于或低于社会平均获利能力，所以大部分公司的估值我们都可以用1倍PB作为一个相对准确又公允又不用那么费脑力去获得的数值。实业资本购买或出售一项资产就是遵循这个道理，最终成交价很少偏离资产太多。从这一点来看，从资产的角度看待公司的价值要靠谱得多。）</p>
+<p>从以上我们看到，投资二级市场的回报我们就可以换一个方式来表达：<br>回报=盈利的提升+当前盈利估值比率（市盈率）的提升+拿到手的分红。<br>或者<br>回报=资产的提升+当前资产估值比率（市净率）的提升+拿到手的分红。</p>
+<p>我曾经在我的拼图系列讨论过三击获利法，那就是从盈利增长的角度去看的，准确的说应该叫做《雷氏三击获利法之盈利篇》。<br>他适应的范围其实是非常有限的，只适用那些稳健增长的弱周期的公司。</p>
+<p>因为我比较偏重稳健投资，所以实际上我更喜欢从资产的角度去看一项投资，仍旧存在一个三击获利法，他的适用范围则广泛得多，几乎适用于所有类型的公司。实际上做实业投资的都是按这种方法去评估一家公司的价值。我称之为《三击获利法之资产篇》。</p>
+<p>具体如下：</p>
+<p>二级市场股票收益（或亏损）= 股利收益部分+净资产增长收益部分+市场估值收益部分（按净资产估值，即市净率增长）。<br>任何时候新开一笔投资，只要注重这三部分的确定性，那么无论中间过程如何，自己知道最终的收益就如掌中物，方能八风袭来，我自岿然不动。<br>我的选股条件即：<br>1）股利越高越好，税前至少大于一年定期。这保证了我的第一个收益。<br>2）根据历史横向和纵向的比较，根据一点点常识和未来的趋势，未来5~10年，ROE能比较确定的保持在一个稳定较高的水准，例如12%~15%以上。这保证我第二个收益。<br>3）估值处于低谷，最好处于历史平均值的一半以下，或买那些PB小于长期ROE的平方的1半的股票。长期看他的估值必回到合理估值附近。这保证我第三个收益。<br>长期持有，再辅以适当分散，输的概率很低。</p>
+<p>以兴业银行为例，未来10年，如果以当前股价购入，我有如下预期：<br>股利收益部分：5%<br>净资产增值部分：平均ROE 15%，分红20%，每年净资产增值为12% （兴业银行历史上最低一年ROE为17.51%，即每年净资产都在增加，从未停止）<br>市场估值（10年内PB从1倍到达2倍）：7% (当前市净率1倍以下，历史最低，最近10年平均PB为2.23倍，根据当前获利能力合理PB为4.31倍，当然如果5年内回归，此数值就是15%，以此类推，20年为3.5%，30年为2.3%，40年为1.7%，所以长期来说，盈利和估值的关系越来越小，最终基本是由ROE决定的）<br>那么未来我的复合年收益将为：5%+12%+7%=24%<br>每年检视这三项指标，除了市场估值短期无规律（当然长期一定回到平均水平），股利和每股净资产增长不随市场发生关系，只要ROE保持一定水平，自然让人达到目标，自然能安心持有。</p>
+<p>注：这种方法有个好处，就是并不需要业绩的增长，哪怕有时业绩是下降的，只要ROE保持较高水准，就知道是赚钱的。</p>
+<pre><code>市净率是和ROE联动的指标，对于一家ROE为10％的公司，认为其价值就是其净资产，即PB为1.
+价格永远围绕价值波动，价格就像一只被拴着绳子围绕主人跑前跑后的小狗，尽管有时很调皮，跑得很远，但它最终还得回到主人（价值）的身边，而分红就是那条拴狗绳。
+</code></pre><hr>
+<p>股市的照妖镜–硬指标不忽悠</p>
+<p>【雷氏三击获利法】投资二级市场的回报来自三个方面：公司内在价值的提升+市场估值的提升+拿到手的分红。<br>三击获利法中主要的硬指标：1、ROE（内在价值提升的来源）2、PE或PB（市场估值）3、股息率</p>
+<p>我喜欢硬指标，硬指标就是股市的一面照妖镜，可以有效防止做出离谱的决策。因为硬指标无法忽悠。<br>市场充斥着各种概念、天花乱坠的说辞，各种忽悠，不中招很难，但坚持用硬指标这面照妖镜，想中招也很难。<br>你吹得天花乱坠，业绩如何牛逼，公司护城河如何强大，ROE却长期徘徊在个位数，甚至负数，直接现形，不是我的菜，pass掉。<br>你吹得天花乱坠，估值如何低，PE却是40、50倍，甚至70、80乃至上百倍，PB 7、8倍乃至10几倍，不是我的菜，直接pass！<br>你吹得天花乱坠，回报如何高，管理层如何诚信，但分红连活期都不如，不是我的菜，直接pass！</p>
+<p>一年前的昨天早上（2014-3-6），我发了一篇博文《保持清醒，珍惜机会，拥抱股市–当前最重要的两件事》鼓吹100%重仓，就是因为当时中国股票市场极度低迷(上证2053点，浦发银行8.04元，兴业银行8.59元，前复权)，但硬指标却非常非常的“硬”！</p>
+<p>有多硬？以浦发银行为例，当时其三击（资产篇）各硬指标为：<br>1、ROE：21.53% （超过20%，意味着一年内在价值可以提升约15%（70%资产留存），超硬！）<br>2、PB：0.79 （净资产8折，历史最低估值，超硬！）<br>3、股息率：7.59% （是一年定期利率2.5倍，光此一项就已超过绝大部分银行理财产品，达到很多人的投资目标，超硬！）<br>那么经过这一年，我们看看三击到底是如何发生作用的：</p>
+<p>首先，通过这一年内在价值的提升获利部分：<br>资产篇中我们是以净资产表示内在价值，浦发银行一年前每股净资产为10.96元，今天13.10元，价值提升2.14元，价值提升部分获利19.53%到手了！注意这部分获利完全不care市场价格，只跟ROE和利润留存率有关系。<br>其次，估值提升获利部分：<br>PB从0.79到今天的1.04，也就是靠估值提升获利31.65%，这是唯一和市场发生关系的部分，不过也不用担心，只要买入时只要够硬，这部分提升简直也是铁板钉钉的事，我统计了roe优等生的历史，只要初始指标不是太软（例如高于历史平均），5年以内这部分必定提升获利，越硬获利时间越短，如果买入时总是历史最硬（创新低），那么绝大部分1年内就提升见效果，就如0.79的浦发。<br>最后，分红获利部分：<br>这是拿到手的部分，浦发拿到手0.627元，这部分获利7.21%。这部分买进时就确定了，也不会和市场发生关系。<br>总获利=内在价值提升（净资产增加）+估值提升（PB增加）+分红（股息率）=1.1953<em>1.3165</em>1.0721-1=68.71%。</p>
+<h2 id="我们可以看到，当估值硬得无法再硬时（弹簧没有压缩空隙，PB无法下降），一家roe为正数的公司剩下的除了获利，还能有其他结果吗？这其实就是三击获利法的精髓，看上去很傻瓜很普通，人人都知，奇怪的是很少人真正在用。"><a href="#我们可以看到，当估值硬得无法再硬时（弹簧没有压缩空隙，PB无法下降），一家roe为正数的公司剩下的除了获利，还能有其他结果吗？这其实就是三击获利法的精髓，看上去很傻瓜很普通，人人都知，奇怪的是很少人真正在用。" class="headerlink" title="我们可以看到，当估值硬得无法再硬时（弹簧没有压缩空隙，PB无法下降），一家roe为正数的公司剩下的除了获利，还能有其他结果吗？这其实就是三击获利法的精髓，看上去很傻瓜很普通，人人都知，奇怪的是很少人真正在用。"></a>我们可以看到，当估值硬得无法再硬时（弹簧没有压缩空隙，PB无法下降），一家roe为正数的公司剩下的除了获利，还能有其他结果吗？这其实就是三击获利法的精髓，看上去很傻瓜很普通，人人都知，奇怪的是很少人真正在用。</h2><p>做巴菲特还是施洛斯-弄清属于自己的那盘菜</p>
+<pre><code> 巴菲特和施洛斯，这两个老头都是投资牛人，超级牛的那种。他们都有超过40年的成功投资历史，并都取得了超过20%的非凡业绩（注：未扣除提成）。
+
+ 如果不考虑资金量，施洛斯甚至更牛一些，因为他没有免费杠杆。（参见博文《很少有人去认真思考过的秘密》）毫无疑问，如果能跟随他们，那么就成功了一半，因为站在巨人的肩膀上，可以看到远方正确的目标，以及通向这个方向的投资正道。但事情却并不是那么简单。我们知道尽管他们俩都师承格雷厄姆，但走的路子却相当不同，两个人甚至没有什么共同点-除了都不抽烟，他们的持股也几乎没有交集。巴菲特自称他是85%的格雷厄姆+15%的费雪，实际上我觉得倒是应该反过来，15%的格雷厄姆+85%的费雪，当然反过来也夸张了一点，比较客观的可能还得把芒格（少说40%）加进来，不过猜测巴菲特是为了尊重老师才这么说的，总之除了安全边际等少数几个特征，现在巴的投资方法已经和老师格雷厄姆相差甚远了。而施洛斯则是不折不扣的继承了格的衣钵，是一个100%的格式投资者。他们的方法如此不同，我们到底该跟随谁呢？当年，有人给施洛斯推荐后来的大牛股施乐公司，被格老师直接咔嚓掉，他跟施洛斯说：这不是我们的菜！而现在有两盘菜摆在我们面前，我们自己的那盘菜又在哪里呢？
+
+我也一直在思考这个问题，到底什么才是真正属于自己的那盘菜？巴老师这盘菜属于自己吗？这盘菜的特征是：护城河，安全边际，逆向，集中投资，长期持有。偏重定性。他和芒格经常说的：用合理的价格买入优秀公司比以不同寻常的价格买入一般的公司要好得多。很好诠释了他的主要投资思想。多好啊！多优秀的策略！我也喜欢优质的企业，我也喜欢长期持有，但我知道，我做不了纯粹的巴式投资。非不想也，是不能也。这种策略的前提是对企业的深度理解，以及超强慧眼识人的能力。这正是巴菲特擅长的，而这种能力很大程度是天生的，非后天学习能补足的。我自认缺少这种能力，这方面水平相当有限。另外这种方法去除杠杆后的收益也并不是我想追求的，小资金用这种方法略显浪费。
+
+施老师这盘菜属于自己吗? 这盘菜的特征是：捡烟头，超级安全边际，逆向，分散化投资，价值回归或定时退出。偏重定量。这里面也有很多我喜欢的东西：定量、大数定律、量化概率、便宜。而且这似乎更适合普通人跟随，因为他更容易学习。但我知道，我也做不了纯粹的施洛斯。因为我天生排斥烟头企业，我喜欢持有睡得着等得起的公司（参见博文《用“等得起”的钱去购买“等得起”的公司》）。没有盈利的公司，既不能清算，资产再多也让人睡不着，更不用说下跌后买入更多了。另外我也不喜欢持有上百家企业。
+
+那么我的那盘菜到底在哪里，我曾寻寻觅觅。很幸运，我后来终于找到他：既然没有能力彻底理解或找到一家伟大的公司，但却可以用一种苛刻的定量的方法找到一小批优秀的公司，其中有几家会达不到预期也是预料中的事，但他们总体一定会超过平均水平。恰如R15俱乐部。既然不喜欢烟头，又喜欢便宜，那么仍然可以用一种定量的方法找到既能盈利又便宜的公司，恰如双五股票（加入了股息这个特征，盈利已有保证）。既然不喜欢非常分散，又没能力非常集中，那么就适当分散，理论证明当样本达到15，就是很好体现统计特征，规避个别系统风险。这几方面结合起来就是：优质公司+低估+适当分散+长期持有或条件持有。
+
+ 每个人都有适合自己的那道菜，而这就是属于我的那道菜，他就是中庸。
+</code></pre><p>附录：如图，下边向右的象限是巴式偏向的投资法，上边的向上的象限是施洛斯更偏重的投资法。可以看出巴菲特和施洛斯的象限交集是比较少的，而我的喜欢的象限是在中道。当然如果随着资金的增大，该中道象限需要逐渐向右边的象限偏移。</p>
+<p>作者：淡忘的岁月<br>链接：<a href="https://xueqiu.com/2858189581/57248910" target="_blank" rel="external">https://xueqiu.com/2858189581/57248910</a><br>来源：雪球<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>您的支持将激励我们前行！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="微信二维码稍后更新" alt="Yang WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="支付宝付款二维码稍后更新" alt="Yang Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/03/做多与做空杠杆ETF列表-美国股市、长期国债、房地产、公共事业/" rel="next" title="做多与做空杠杆ETF列表 (美国股市、长期国债、房地产、公共事业)">
+                <i class="fa fa-chevron-left"></i> 做多与做空杠杆ETF列表 (美国股市、长期国债、房地产、公共事业)
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/03/一颗新韭菜的被割之路/" rel="prev" title="一颗新韭菜的被割之路">
+                一颗新韭菜的被割之路 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Yang" />
+          <p class="site-author-name" itemprop="name">Yang</p>
+          <p class="site-description motion-element" itemprop="description">一二一量化投资策略</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#我们可以看到，当估值硬得无法再硬时（弹簧没有压缩空隙，PB无法下降），一家roe为正数的公司剩下的除了获利，还能有其他结果吗？这其实就是三击获利法的精髓，看上去很傻瓜很普通，人人都知，奇怪的是很少人真正在用。"><span class="nav-number">1.</span> <span class="nav-text">我们可以看到，当估值硬得无法再硬时（弹簧没有压缩空隙，PB无法下降），一家roe为正数的公司剩下的除了获利，还能有其他结果吗？这其实就是三击获利法的精髓，看上去很傻瓜很普通，人人都知，奇怪的是很少人真正在用。</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yang</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
